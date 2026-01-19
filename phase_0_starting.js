@@ -1,4 +1,3 @@
-// What is Javascript ? explain in hinglish full history
 // JavaScript ek programming language hai jo web development ke liye use hoti hai.
 // Iska full naam "JavaScript" hai, aur ye 1995 me Brendan Eich ne banayi thi.
 // Shuru me iska naam "Mocha" tha, phir "LiveScript" aur finally "JavaScript" rakha gaya.
