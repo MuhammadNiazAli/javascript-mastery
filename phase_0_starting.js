@@ -1,103 +1,80 @@
-// JavaScript ek programming language hai jo web development ke liye use hoti hai.
-// Iska full naam "JavaScript" hai, aur ye 1995 me Brendan Eich ne banayi thi.
-// Shuru me iska naam "Mocha" tha, phir "LiveScript" aur finally "JavaScript" rakha gaya.
-// JavaScript ko initially web browsers me run karne ke liye design kiya gaya tha,
-// taaki web pages interactive ban sakein.
-// Aaj ke time me JavaScript sirf browsers tak simit nahi hai,
-// balki server-side programming (Node.js), mobile apps, desktop apps, aur game development me bhi use hoti hai.
-// JavaScript dynamically typed, interpreted language hai,
-// jiska matlab hai ki isme variables ko declare karte waqt unka type specify nahi karna padta,
-// aur code ko run karte waqt interpret kiya jata hai.
-// JavaScript ne web development me revolution la diya hai,
-// aur ye aaj bhi web ka ek essential hissa hai.
-console.log("JSON String:", jsonString);
-// console me JSON string print ho jayega.
-// ye string ab server ko bheji ja sakti hai ya storage me save ki ja sakti hai.
-// output: {"employees":[{"firstName":"John","lastName":"Doe"},{"firstName":"Anna","lastName":"Smith"},{"firstName":"Peter","lastName":"Jones"}]}
-// ==================== DOM Manipulation ====================
-// DOM ka matlab Document Object Model.
-// Ye ek tree structure hai jo HTML document ko represent karta hai.
-// JavaScript se hum DOM ko manipulate kar sakte hain
-// taaki web pages dynamic aur interactive ban sakein.
-const heading = document.querySelector("h1");
-// yahan humne document se pehla h1 element select kiya.
-console.log(heading);
-// console me heading element print hoga.
-// ==================== Selecting Elements ====================
-// 1 getElementById
-// Ye method sirf id ke base par element deta hai.
-const mainHeading = document.getElementById("main-heading");
-console.log(mainHeading);
-// 2 querySelector
-// querySelector CSS selector ki tarah kaam karta hai.
-const firstParagraph = document.querySelector("p");
-console.log(firstParagraph.textContent);
-// 3 querySelectorAll
-// Ye multiple elements return karta hai.
-const allParagraphs = document.querySelectorAll("p");
-allParagraphs.forEach((para, index) => {
-    console.log(`Paragraph ${index + 1}: ${para.textContent}`);
-});
-// ==================== Changing Text Content ====================
-// 1 innerText
-// Ye method text content ko change karta hai.
-mainHeading.innerText = "Hello World";
-// 2 textContent
-// Ye method text content ko change karta hai.
-firstParagraph.textContent = "This is a new paragraph.";
-// 3 innerHTML
-// Ye method HTML content ko change karta hai.
-firstParagraph.innerHTML = "<strong>This is a bold paragraph.</strong>";
-console.log("Updated Heading:", mainHeading.innerText);
-console.log("Updated Paragraph:", firstParagraph.innerHTML);
-console.log("Updated Paragraph Text:", firstParagraph.textContent);
-// output:
-// Updated Heading: Hello World
-// Updated Paragraph: <strong>This is a bold paragraph.</strong>
-// Updated Paragraph Text: This is a bold paragraph.
-// ==================== Changing Styles ====================
-// 1 Direct Style Manipulation
-// Hum directly style properties ko change kar sakte hain.
-mainHeading.style.color = "blue";
-mainHeading.style.fontSize = "36px";
-firstParagraph.style.backgroundColor = "yellow";
-firstParagraph.style.padding = "10px";
-console.log("Heading Color:", mainHeading.style.color);
-console.log("Paragraph Background Color:", firstParagraph.style.backgroundColor);
-// output:
-// Heading Color: blue  
-// Paragraph Background Color: yellow
-// 2 CSS Classes
-// Hum CSS classes ko add/remove/toggle kar sakte hain.
-mainHeading.classList.add("highlight");
-firstParagraph.classList.remove("old-class");
-firstParagraph.classList.toggle("active");
-console.log("Heading Classes:", mainHeading.className);
-console.log("Paragraph Classes:", firstParagraph.className);
-// output:
-// Heading Classes: highlight
-// Paragraph Classes: active
-// ==================== Creating and Inserting Elements ====================
-// 1 Creating Elements
-const newDiv = document.createElement("div");
-newDiv.innerText = "This is a new div element.";
-newDiv.style.border = "1px solid black";
-newDiv.style.padding = "10px";
-// 2 Inserting Elements
-document.body.appendChild(newDiv);
-console.log("New Div Added:", newDiv.innerText);
-// output: New Div Added: This is a new div element.
+// JavaScript ek programming language hai jo primarily web development ke liye design ki gayi thi
+// Iska main purpose web pages ko interactive aur dynamic banana tha
+// JavaScript ko pehle "Mocha" naam diya gaya tha, phir "LiveScript" aur finally "JavaScript"
+// JavaScript ko 1995 mein Brendan Eich ne develop kiya tha Netscape Communications Corporation ke liye
+// Initially JavaScript ka use web browsers mein hota tha, lekin aaj ke time mein ye server-side, mobile apps,
+// desktop applications aur game development ke liye bhi use hota hai
 
-// ==================== Nested Objects & Arrays ====================
-const student = {
-    name: "Rahul",
-    age: 22,
-    marks: {
-        math: 88,
-        english: 92,
-        science: 85
-    },
-    hobbies: ["cricket", "reading", "traveling"]
-};
+// JavaScript ko aap "lightweight" aur "interpreted" programming language keh sakte hain
+// Iska matlab hai ki aapko variables declare karte waqt unka type specify nahi karna padta
+// Aur JavaScript ka code run-time pe interpret hota hai
 
-console.log("Student Name:", student.name);
+// JavaScript ka use aaj kal har jagah hota hai: Web Development, Mobile Apps (React Native), 
+// Server-side Programming (Node.js), Desktop Apps, Game Development aur bhi kai cheezon mein
+
+// JavaScript ki Evolution (Versions):
+// 1. **ES3 (ECMAScript 3)**: JavaScript ka pehla standard 1999 mein release kiya gaya
+// 2. **ES5 (ECMAScript 5)**: 2009 mein aaya tha aur ismein kuch important features jaise 'strict mode' aur 'JSON' ka support add kiya gaya
+// 3. **ES6 (ECMAScript 2015)**: Ye JavaScript ka major upgrade tha, ismein naye features jaise 'let', 'const', 'arrow functions',
+//    'Promises', 'Classes', 'Modules' aur 'Template Literals' add kiye gaye
+// 4. **ES7 aur Baaki Versions**: Har saal naye features aur improvements aate hain jaise async/await, Object.entries, 
+//    Array.includes, etc.
+
+// **Modules in JavaScript (CommonJS vs ES Modules)**:
+// JavaScript mein do major tarike ke modules hote hain:
+// 1. **CommonJS (CJS)**:
+//    - CommonJS Node.js ka default module system hai
+//    - Isme hum `require()` aur `module.exports` ka use karte hain
+//    - Example: 
+//      ```javascript
+//      const myModule = require('./myModule');
+//      module.exports = myModule;
+//      ```
+//    - Ye mainly server-side Node.js applications mein use hota hai
+
+// 2. **ES Modules (ESM)**:
+//    - ES6 mein introduced hua tha aur isme hum `import` aur `export` ka use karte hain
+//    - Ye syntax cleaner aur zyada modular hai
+//    - Example:
+//      ```javascript
+//      import { myFunction } from './myModule';
+//      export { myFunction };
+//      ```
+//    - ES Modules ko use karne ke liye browser ya Node.js ko specific configuration ki zarurat hoti hai
+//    - ES6 Modules ko zyada tar modern JavaScript applications mein use kiya jata hai
+
+// **Types of Variables in JavaScript**:
+// JavaScript mein variables declare karne ke liye 3 tarike hain:
+// 1. **var**: Ye purane version mein use hota tha, aur globally ya function level pe scoped hota hai
+// 2. **let**: ES6 se introduce hua tha aur block-level scoped hota hai, isko dobara declare nahi kiya ja sakta
+// 3. **const**: Ye bhi ES6 se introduce hua tha aur constant value ko hold karta hai, iski value ko change nahi kiya ja sakta
+
+// **Variable Scoping in JavaScript**:
+// 1. **Global Scope**: Jab aap variable ko bahar declare karte hain to wo global hota hai
+// 2. **Function Scope (var)**: Jab aap `var` ko function ke andar declare karte hain, to wo variable sirf us function ke andar accessible hota hai
+// 3. **Block Scope (let, const)**: Jab aap `let` ya `const` ko block ke andar declare karte hain, to wo variable sirf us block ke andar accessible hota hai
+
+// **Hoisting in JavaScript**:
+// JavaScript mein variables ko hoist kiya jata hai, iska matlab hai ki variable declaration code ke top pe move kar jata hai
+// `var` ko hoist karte waqt uska value `undefined` hota hai
+// `let` aur `const` ko hoist kiya jata hai, lekin unka value initialization ke baad hi accessible hota hai, TDZ (Temporal Dead Zone) ke wajah se
+
+// **JavaScript ke Main Features**:
+// - **Dynamic Typing**: JavaScript mein variables ka type run-time pe decide hota hai, aapko variables declare karte waqt type specify nahi karna padta
+// - **Asynchronous Programming**: JavaScript mein asynchronous programming kaafi important hai, aur `Promises` aur `async/await` ka use karke isko manage kiya jata hai
+// - **First-Class Functions**: JavaScript mein functions ko pehli class citizens ke tarah treat kiya jata hai, isliye aap functions ko variables ke jaise pass aur return kar sakte hain
+// - **Event-Driven Programming**: JavaScript mainly event-driven programming ka use karta hai, jisme user interactions aur events (click, scroll, etc.) ko handle kiya jata hai
+
+// **JavaScript ke Modern Features**:
+// - **Arrow Functions**: Short syntax for writing functions
+// - **Template Literals**: Strings ko easily interpolate karne ke liye
+// - **Destructuring**: Objects aur arrays ko easily unpack karna
+// - **Classes**: Object-oriented programming ka support
+// - **Modules**: Code ko alag-alag files mein modularize karna
+// - **Promises/async-await**: Asynchronous code ko better tarike se handle karna
+
+// **Conclusion**:
+// JavaScript ek versatile aur powerful language hai jo har web developer ke liye essential hai
+// Iska evolution ES5 se ES6 tak aur uske baad ke versions mein kaafi important features add kiye gaye hain
+// JavaScript ke modules, scoping, aur variable declaration techniques ko samajhna bahut zaroori hai
+// JavaScript ne modern web development ko shape diya hai aur aaj bhi ye web aur app development mein key role play karta hai
