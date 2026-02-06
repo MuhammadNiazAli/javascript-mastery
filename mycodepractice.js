@@ -2,6 +2,8 @@
 
 // For loop
 
+
+
 // for(let i = 0; i <= 10; i++){
 //     console.log(i)
 // }
@@ -28,7 +30,7 @@
 //     }
 // }
 
-//While loop
+// While loop
 
 // let i = 0;
 // while(i <= 10){
@@ -87,7 +89,7 @@
 //  db++
 // }while(db < dobj.length)
 
-//For in loop
+// For in loop
 
 // let person = {
 //     name:"ali",
@@ -504,3 +506,92 @@
 // }
 // deletapi(1)
 
+// async function DeleteApi(id) {
+//   try {
+//     const res = await fetch(
+//       `http://localhost:3000/api/delete/${encodeURIComponent(id)}`,
+//       { method: "DELETE" }
+//     );
+
+//     if (!res.ok) {
+//       throw new Error(`HTTP Error ${res.status}`);
+//     }
+
+//     console.log("Delete success:", id);
+//     return true;
+//   } catch (err) {
+//     console.log("Error:", err?.message || err);
+//     return false;
+//   }
+// }
+
+
+// async function DeleteMe(id) {
+//     try{
+//         const res = await fetch(`https://jsonplaceholder.typicode.com/posts/1`,{
+//             method:"DELETE",
+//         });
+//        if(!res.ok){
+//         throw new Error(`HTTP Error ${res.status}`)
+//        }
+//        console.log("delete done",id)
+//        return true
+//     }catch(err){
+//         console.log("Error",err?.message || err)
+//         return false
+//     }
+// }
+// DeleteMe(1)
+
+// async function Getdata() {
+//     try{
+//         const res = await fetch("https://openlibrary.org/api/books?bibkeys=ISBN:9780140328721&format=json&jscmd=data")
+//        if(!res.ok){
+//         throw new Error (`HTTP Error ${res.status}`)
+//        }
+//        const data = await res.json();
+//        console.log(data)
+//        return data
+//     }catch(err){
+//         console.log("Error :",err.message)
+//         return null
+//     }
+    
+// }
+// Getdata()
+
+// async function Postapi() {
+//     try{
+//         const payload = {
+//             title:"Book",
+//             color:"Green",
+//             total:"2000Rs"
+//         }
+//         const res = await fetch("https://httpbin.org/post",{
+//             method:"POST",
+//             headers:{
+//                 "Content-Type":"application/json"
+//             },
+//             body: JSON.stringify(payload)
+//         })
+//         if(!res.ok){
+//             throw new Error(`HTTP Error ${res.status}`)
+//         }
+//         const data = await res.json()
+//         console.log("Data Posted Sucessfully",data)
+//         return data
+//     }catch(err){
+//         console.log("Error :", err?.message || err)
+//         return null
+//     }
+    
+// }
+// await Postapi();
+
+// function abc(callback){
+//     console.log("hello")
+//     callback()
+// }
+// abc(()=>{
+//     console.log("done")
+// })
