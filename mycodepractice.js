@@ -1,8 +1,4 @@
-
-
 // For loop
-
-
 
 // for(let i = 0; i <= 10; i++){
 //     console.log(i)
@@ -182,7 +178,7 @@
 //     console.log("no one");
 // }
 
-// let totalemploy = 14; <========= this 14 and 
+// let totalemploy = 14; <========= this 14 and
 
 // switch (totalemploy) {
 //   case 2:
@@ -191,19 +187,18 @@
 //   case 4:
 //     console.log("yes total 14 employ");
 //     break;
-//   case 14: <============================== this one matchable 
+//   case 14: <============================== this one matchable
 //     console.log("working this one <="); // <======== this is the answer
 //     break;
 //   default:
 //     console.log("no one");
 // }
 
-
 // setInterval(()=>{ // depend on time and repeatitive
-//    console.log("wait") 
+//    console.log("wait")
 // },2000)
-// setTimeout(()=>{ // depend on time only 
-//    console.log("wait") 
+// setTimeout(()=>{ // depend on time only
+//    console.log("wait")
 // },2000)
 
 // let firstarr = [1,2,3,4,5,6]
@@ -243,7 +238,6 @@
 
 // getdata();
 
-
 // async function getdata() {
 //     try{
 //         const res = await fetch("https://jsonplaceholder.typicode.com/users")
@@ -257,10 +251,9 @@
 //         console.log("Error :" , err.message)
 //         return null
 //     }
-    
+
 // }
 // getdata()
-
 
 // async function Getdata() {
 //     try{
@@ -275,11 +268,9 @@
 //         console.log("Error :" , err.message)
 //         return null
 //     }
-    
+
 // }
 // Getdata()
-
-
 
 // async function Getdata() {
 //     try{
@@ -294,7 +285,7 @@
 //         console.log("Error :" , err.message)
 //         return null
 //     }
-    
+
 // }
 // Getdata()
 
@@ -329,7 +320,6 @@
 
 // createPost();
 
-
 // async function Postdata() {
 //     try{
 //         const payload ={
@@ -342,7 +332,7 @@
 //            headers:{
 //             "Content-Type":"application/json"
 //            },
-//            body: JSON.stringify(payload) 
+//            body: JSON.stringify(payload)
 //         });
 //     if(!res.ok){
 //         throw new Error(`HTTP Error ${res.status}`)
@@ -354,11 +344,9 @@
 //     console.log("Error :", err.message)
 //     return null
 //     }
-    
+
 // }
 // Postdata()
-
-
 
 // async function PostData() {
 //     try{
@@ -384,7 +372,7 @@
 //         console.log("Error :", err.message)
 //         return null
 //     }
-    
+
 // }
 // PostData()
 
@@ -412,7 +400,7 @@
 //         console.log("Error :",err.message)
 //         return null
 //     }
-    
+
 // }
 // // postdata()
 
@@ -429,7 +417,7 @@
 //         console.log("Error :", err.message)
 //         return null
 //     }
-    
+
 // }
 // getdata()
 
@@ -458,7 +446,7 @@
 //         console.log("Error:",err.message)
 //         return null
 //     }
-    
+
 // }
 // updateapi(1)
 
@@ -484,7 +472,7 @@
 //         console.log("Error :",err.message)
 //         return null
 //     }
-    
+
 // }
 // patchapi()
 
@@ -502,7 +490,7 @@
 //         console.log("Error",err.message)
 //         return false
 //     }
-    
+
 // }
 // deletapi(1)
 
@@ -524,7 +512,6 @@
 //     return false;
 //   }
 // }
-
 
 // async function DeleteMe(id) {
 //     try{
@@ -556,7 +543,7 @@
 //         console.log("Error :",err.message)
 //         return null
 //     }
-    
+
 // }
 // Getdata()
 
@@ -584,7 +571,7 @@
 //         console.log("Error :", err?.message || err)
 //         return null
 //     }
-    
+
 // }
 // await Postapi();
 
@@ -609,7 +596,7 @@
 //         console.log("Error :", err?.message || err)
 //         return null;
 //     }
-    
+
 // }
 // await Getdata()
 
@@ -669,10 +656,9 @@
 //         console.log("Error :", err?.message || err)
 //         return null;
 //     }
-    
+
 // }
 // await PostData()
-
 
 // async function PostData() {
 //     try{
@@ -699,10 +685,9 @@
 //         console.log("Error :", err?.message || err)
 //         return null
 //     }
-    
+
 // }
 // await PostData()
-
 
 // async function GetBooks() {
 //     try{
@@ -717,7 +702,99 @@
 //         console.log("Error :",err?.message || err)
 //         return null
 //     }
-    
+
 // }
 // await GetBooks()
+
+// for(let n = 1; n <=5; n++){
+//     console.log(n)
+// }
+// let out = "";
+// for (let n = 1; n <= 5; n++) {
+//   out += n + " ";
+// }
+// console.log(out.trim());
+
+// let total = "";
+// for(let i = 1; i <= 5; i++){
+//     total += i + "";
+
+// }  console.log(total.trim())
+
+// for(let i = 1; i <=10; i++){
+//     if(i % 2 === 0){
+//       console.log(i)
+//     }
+// }
+
+// for (let i = 2; i <= 10; i += 2) {
+//   console.log(i);
+// }
+
+// for(let i = 3; i <=10; i+=3){
+//     console.log(i)
+// }
+
+// let sum = 0;
+
+// for (let n = 1; n <= 15; n++) {
+//   sum = sum + n; // or sum += n
+// }
+
+// console.log("Sum =", sum);
+
+// let sum = 0;
+
+// for (let n = 1; n <= 15; n++) {
+//   sum += n;
+//   console.log("n =", n, "sum =", sum);
+// }
+
+// let totalsum = 0;
+// for(let i = 1; i <=15; i++){
+//     totalsum = totalsum+i
+// }
+// console.log("Total = " ,totalsum)
+
+// let n = 15;
+// let fact = 1;
+
+// for (let i = 1; i <= n; i++) {
+//   fact *= i;
+// }
+
+// console.log(`${n}! = ${fact}`);
+
+// let num = 30;
+// let mybe = 1;
+// for(let i = 1; i<= num; i++){
+//     fact*=i;
+// }
+// console.log(`${num}!=${fact}`)
+
+// let n = 3;
+
+// for (let i = 1; i <= 10; i++) {
+//   console.log(`${n} x ${i} = ${n * i}`);
+// }
+
+// let table = 3;
+// for(let i = 1; i<=10; i++){
+//     console.log(`${table} x ${i} = ${table * i}`)
+// }
+
+// let n = 7;
+
+// for (let i = n; i >= 1; i--) {
+//   console.log(i);
+// }
+
+// let arr = [1,2,3,4,5]
+// const dubble = arr.map(n => n*2);
+// console.log(dubble)
+
+// let a = "b2"
+// var b = "ab2"
+// const c = a+b
+// console.log(c)
 
