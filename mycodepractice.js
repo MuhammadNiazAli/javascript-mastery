@@ -595,3 +595,129 @@
 // abc(()=>{
 //     console.log("done")
 // })
+
+// async function Getdata() {
+//     try{
+//         const res = await fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+//         if(!res.ok){
+//             throw new Error (`HTTP Error ${res.status}`)
+//         }
+//         const data = await res.json();
+//         console.log(data)
+//         return data
+//     }catch(err){
+//         console.log("Error :", err?.message || err)
+//         return null;
+//     }
+    
+// }
+// await Getdata()
+
+// for(let i = 10; i <= 20; i++){
+//     console.log(i)
+// }
+
+// let i = 10
+// while(i <= 20){
+//     console.log(i)
+//     i++
+
+// }
+
+// let d = 10;
+// do{
+//  console.log(d)
+//  d++
+// }while(d <= 20)
+
+// let arr = ["apple","banana","mango","graphs"]
+// for(let i in arr){
+//     console.log(i + ": " + arr[i])
+// }
+
+// let objects = {
+//     name:"ali",
+//     age:20,
+//     profession:"FullStack WebDeveloper"
+// }
+
+// for(let i of objects){
+//     console.log(i)
+// }
+
+// async function PostData() {
+//     try{
+//         const payload={
+//             name:"Apple",
+//             color:"red",
+//             tast:"sweet"
+//         }
+//         const res = await fetch("https://jsonplaceholder.typicode.com/posts",{
+//             method:"POST",
+//             headers:{
+//                 "Content-Type":"Application/json"
+//             },
+//             body: JSON.stringify(payload)
+//         })
+//         if(!res.ok){
+//             throw new Error(`HTTP Error ${res.status}`)
+//         }
+//         const data = await res.json()
+//         console.log("Created :" , data)
+//         return data
+//     }catch(err){
+//         console.log("Error :", err?.message || err)
+//         return null;
+//     }
+    
+// }
+// await PostData()
+
+
+// async function PostData() {
+//     try{
+//         const payload = {
+//             CarName:"ToyoTa",
+//             CarColor:"Black",
+//             Engine:"new",
+//             Price:"800000"
+//         }
+//         const res = await fetch("https://jsonplaceholder.typicode.com/posts",{
+//             method:"POST",
+//             headers:{
+//                 "Content-Type":"Application/json"
+//             },
+//             body: JSON.stringify(payload)
+//         })
+//         if(!res.ok){
+//             throw new Error(`HTTP Error ${res.status}`)
+//         }
+//         const data = await res.json()
+//         console.log("Created :", data)
+//         return data
+//     }catch(err){
+//         console.log("Error :", err?.message || err)
+//         return null
+//     }
+    
+// }
+// await PostData()
+
+
+// async function GetBooks() {
+//     try{
+//         const res = await fetch(`https://api.itbook.store/1.0/new`)
+//         if(!res.ok){
+//             throw new Error(`HTTP Error ${res.status}`)
+//         }
+//         const data = await res.json()
+//         console.log(data)
+//         return data
+//     }catch(err){
+//         console.log("Error :",err?.message || err)
+//         return null
+//     }
+    
+// }
+// await GetBooks()
+
