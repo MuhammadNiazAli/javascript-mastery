@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="./language/js.webp" alt="JavaScript" width="120" />
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer">
+  <img src="./language/js.webp" alt="JavaScript" width="120" />
+</a>
 
 # JavaScript Complete Mastery Guide  
 **From Beginner to Legendary Level**
